@@ -9,8 +9,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float _spriteSpeed;
 
     private PlayerController _playerController;
-    private Rigidbody2D _player;
     private GameManager gameManager;
+    private Rigidbody2D _player;
     private SpriteRenderer _spriteRenderer;
     //private float minRotation = 20;
     //private float maxRotation = -20;
@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         //_lastY = transform.position.y;
-        _player.GetComponent<Rigidbody2D>();
+        _player = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         gameManager = FindObjectOfType<GameManager>();
         _playerController = new PlayerController();
